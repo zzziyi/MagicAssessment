@@ -49,7 +49,7 @@ body {
 .hero h1 {
   margin: 0 0 12px;
   font-family: "DM Sans", sans-serif;
-  font-size: clamp(34px, 5vw, 60px);
+  font-size: clamp(34px, 5vw, 50px);
   line-height: 1.05;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -203,29 +203,144 @@ button {
   width: auto;
 }
 
-/* 小屏适配 */
+/* =========================
+   Mobile Optimization
+   ========================= */
+/* 平板及以下 */
 @media (max-width: 768px) {
+  body {
+    line-height: 1.6;
+  }
+
   .page-shell {
-    width: min(100%, 94%);
-    padding: 28px 0 56px;
+    width: 100%;
+    padding: 24px 14px 48px;
+  }
+
+  .hero {
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+
+  #quizForm {
+    gap: 18px;
   }
 
   .question {
-    padding: 22px 18px 18px;
-    border-radius: 20px;
+    padding: 18px 14px 14px;
+    border-radius: 18px;
   }
 
   .question-title {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  .options {
+    gap: 10px;
   }
 
   .options label {
-    padding: 12px 14px;
+    padding: 14px 14px;
     font-size: 15px;
+    line-height: 1.5;
+    border-radius: 14px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .options input[type="radio"] {
+    margin-top: 2px;
+    transform: scale(1.05);
+  }
+
+  .action-area {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  button {
+    padding: 15px 18px;
+    font-size: 16px;
+    border-radius: 16px;
   }
 
   #result {
-    font-size: 22px;
-    padding: 18px;
+    margin-top: 22px;
+    padding: 18px 14px;
+    border-radius: 18px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .image-container {
+    padding: 8px 0;
+  }
+
+  .type-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: contain;
+  }
+}
+
+/* 小屏手机 */
+@media (max-width: 480px) {
+  .page-shell {
+    padding: 20px 12px 40px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .question {
+    padding: 16px 12px 12px;
+    border-radius: 16px;
+  }
+
+  .question-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .options label {
+    font-size: 14px;
+    padding: 12px 12px;
+    border-radius: 12px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+
+  #result {
+    font-size: 18px;
+    padding: 16px 12px;
+  }
+
+  .type-image {
+    max-height: 200px;
   }
 }
