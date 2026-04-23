@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>LDTI Demo</title>
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <h1>Personality Test</h1>
+      <p>
+        Discover your LDTI personality type.
+      </p>
+    </header>
+
+    <form id="quizForm"></form>
+
+    <div class="action-area">
+      <button id="submitBtn" type="button" onclick="submitTest()">提交测试</button>
+      <button id="restartBtn" type="button" onclick="restartTest()">重新测试</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="./js/basicQuestions.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

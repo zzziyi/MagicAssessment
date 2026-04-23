@@ -1,0 +1,156 @@
+body.result-page {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  background: #f3f4f6;
+  color: #222;
+}
+
+.result-page .page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.result-page .page-title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #27314a;
+  margin: 0 0 28px;
+  line-height: 1.15;
+}
+
+.result-page .result-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 34px 34px 42px;
+  box-shadow: 0 8px 24px rgba(25, 35, 60, 0.06);
+}
+
+.result-page .report-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin: 4px 0 10px;
+}
+
+.result-page .report-subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: #666;
+  margin: 0 0 28px;
+}
+
+.result-page .result-top {
+  background: #f1edfb;
+  border-radius: 24px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.result-page .image-panel {
+  flex: 0 0 42%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px;
+}
+
+.result-page .type-image {
+  display: block;
+  height: 450px;
+  width: auto;
+}
+
+.result-page .info-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-page .label {
+  font-size: 16px;
+  color: #777;
+  margin: 0 0 10px;
+}
+
+.result-page .type-name {
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 16px;
+  letter-spacing: 1px;
+}
+
+.result-page .type-alias {
+  font-size: 28px;
+  font-weight: 700;
+  color: #8f78df;
+  margin: 0 0 18px;
+}
+
+.result-page .type-meta {
+  font-size: 20px;
+  color: #5b5b5b;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.result-page .desc-panel {
+  margin-top: 34px;
+  padding-top: 8px;
+}
+
+.result-page .desc-title-en {
+  font-size: 16px;
+  color: #9a82ea;
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+
+.result-page .desc-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #8f78df;
+  margin: 0 0 22px;
+  line-height: 1.35;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 6px solid #eee8ff;
+}
+
+.result-page .type-description {
+  font-size: 20px;
+  line-height: 2;
+  color: #2f2f2f;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.result-page .restart-btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 999px;
+  background: #8f78df;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.result-page .restart-btn:hover {
+  background: #7d63d8;
+  transform: translateY(-1px);
+}
+
+.result-page .restart-btn:active {
+  transform: translateY(0);
+}

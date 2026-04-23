@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f6f7f8;
+  --surface: #ffffff;
+  --surface-soft: #fbfbfc;
+  --text: #2f3648;
+  --muted: #7c8596;
+  --border: #e7eaf0;
+
+  --green: #2db27d;
+  --green-soft: #e7f7f0;
+
+  --purple: #8f63b8;
+  --purple-soft: #f2ebf8;
+
+  --shadow: 0 10px 30px rgba(30, 41, 59, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* 页面主容器 */
+.page-shell {
+  width: min(960px, 92%);
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+/* 标题区域 */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.hero p {
+  margin: 0 auto;
+  max-width: 680px;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* 表单整体 */
+#quizForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 每一道题 */
+.question {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 28px 28px 22px;
+  box-shadow: var(--shadow);
+}
+
+/* 题目文字 */
+.question-title {
+  margin: 0 0 18px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* 选项容器 */
+.options {
+  display: grid;
+  gap: 12px;
+}
+
+/* label 改成卡片式 */
+.options label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface-soft);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.options label:hover {
+  transform: translateY(-1px);
+  border-color: #cfd7e3;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(30, 41, 59, 0.05);
+}
+
+/* radio 基础样式 */
+.options input[type="radio"] {
+  margin-top: 3px;
+  accent-color: var(--green);
+  transform: scale(1.15);
+  flex-shrink: 0;
+}
+
+/* 选中态：利用 :has，如果浏览器支持会更漂亮 */
+.options label:has(input[type="radio"]:checked) {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+
+/* 按钮区域 */
+.action-area {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 主按钮 */
+button {
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  padding: 16px 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* 提交按钮 */
+#submitBtn {
+  background: linear-gradient(135deg, var(--green), #49bf90);
+  color: white;
+  box-shadow: 0 10px 22px rgba(45, 178, 125, 0.22);
+}
+
+#submitBtn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+/* 重测按钮 */
+#restartBtn {
+  display: none;
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+#restartBtn:hover {
+  background: #f8fafc;
+}
+
+/* 结果卡片 */
+#result {
+  margin-top: 30px;
+  padding: 24px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, var(--purple-soft), #f8f5fb);
+  border: 1px solid #e6dcef;
+  font-family: "DM Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.image-container {
+  background-color: white;   /* 白底 */
+  display: flex;
+  justify-content: center;   /* 水平居中 */
+  align-items: center;       /* 垂直居中（可选） */
+}
+
+.type-image {
+  height: 300px;
+  width: auto;
+}
+
+/* 小屏适配 */
+@media (max-width: 768px) {
+  .page-shell {
+    width: min(100%, 94%);
+    padding: 28px 0 56px;
+  }
+
+  .question {
+    padding: 22px 18px 18px;
+    border-radius: 20px;
+  }
+
+  .question-title {
+    font-size: 22px;
+  }
+
+  .options label {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  #result {
+    font-size: 22px;
+    padding: 18px;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>LDTI测试结果</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/result.css">
+</head>
+<body class="result-page">
+  <div class="page-shell">
+    <h1 class="page-title"></h1>
+
+    <div class="result-card">
+      <h2 class="report-title">你的专属魔法测试报告已生成</h2>
+      <p class="report-subtitle"></p>
+
+      <div class="result-top">
+        <div class="image-panel">
+          <img id="typeImage" class="type-image" alt="角色形象">
+        </div>
+
+        <div class="info-panel">
+          <p class="label">你的魔法职业</p>
+          <h2 id="typeName" class="type-alias"></h2>
+          <p id="typeAlignment" class="type-meta"></p>
+          <p id="typeEnergy" class="type-meta"></p>
+        </div>
+      </div>
+
+      <div class="desc-panel">
+        <!-- <p class="desc-title-en">The type that best reflects your magical nature</p>
+        <h3 class="desc-title">最符合你魔法本质的类型</h3> -->
+        <p id="typeDescription" class="type-description"></p>
+      </div>
+    </div>
+
+     <button id="restartBasicTestBtn" type="button" class="restart-btn">重新测试</button>
+
+  </div>
+
+  <script type="module" src="./js/result.js"></script>
+</body>
+</html>
