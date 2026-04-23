@@ -17,9 +17,10 @@ const ENERGY_DESCRIPTION_MAP = {
 export function buildResult(typeCode) {
   const energy = typeCode[0];
   const baseType = typeCode.slice(1, 4);
+  const mbtiType = typeCode.slice(0, 4);
   const alignment = typeCode[4];
 
-  const base = BASE_RESULT_MAP[baseType];
+  const base = BASE_RESULT_MAP[mbtiType];
   return {
     name: base.name,
     en: base.en,
