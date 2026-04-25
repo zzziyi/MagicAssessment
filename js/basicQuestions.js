@@ -124,11 +124,11 @@ const questions = [
     ]
     },
     {
-    question: "面对一个长期任务，你更可能”",
+    question: "面对一个长期任务，你更可能",
     options: [
       { text: "分阶段规划完成", scores: { Judging: 3 } },
       { text: "随进展灵活推进", scores: { Judging: 1 } },
-      { text: "两者都有，看情况", scores: { Light: 2 } },
+      { text: "两者都有，看情况", scores: { Judging: 2 } },
     ]
     },
     //----------------L/D------------------
@@ -141,7 +141,7 @@ const questions = [
     ]
     },
     {
-    question: "当你是否经常对现有的社会规则感到不满",
+    question: "你是否经常对现有的社会规则感到不满",
     options: [
       { text: "不会，大部分的规则已经是最优解了", scores: { Light: 3 } },
       { text: "是的，这个社会就是个巨大的草台班子", scores: { Light: 1 } },
