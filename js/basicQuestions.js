@@ -11,9 +11,9 @@ const questions = [
     {
     question: "在很放松的聚会中你的舒适区是？",
     options: [
-      { text: "不光和老朋友玩，还会主动去认识新朋友", scores: { Extraversion: 3 } },
+      { text: "不抗拒甚至更享受一个人待着，除非被拉入对话否则更喜欢当倾听者", scores: { Extraversion: 1 } },
       { text: "喜欢去找熟人聊天，在熟悉的小圈子里会主动引导话题", scores: { Extraversion: 2 } },
-      { text: "不抗拒甚至更享受一个人待着，除非被拉入对话否则更喜欢当倾听者", scores: { Extraversion: 1 } }
+      { text: "不光和老朋友玩，还会主动去认识新朋友", scores: { Extraversion: 3 } }
     ]
     },
     {
@@ -83,11 +83,11 @@ const questions = [
     ]
     },
     {
-    question: "服务人员提供服务时，你更倾向",
+    question: "如果规则是合理的，但是会让个别人难受，你更倾向",
     options: [
-      { text: "优先考虑对方是否辛苦，尽量减少麻烦对方", scores: { Thinking: 1 } },
-      { text: "在考虑对方情况和自己需求之间做平衡", scores: { Thinking: 2 } },
-      { text: "优先考虑事情是否需要，正常提出请求", scores: { Thinking: 3 } }
+      { text: "会有点犹豫，先延迟规则发布吧", scores: { Thinking: 2 } },
+      { text: "既然规则是合理的，就应当遵守", scores: { Thinking: 3 } },
+      { text: "先看能不能照顾个体，不然不公平", scores: { Thinking: 1 } }
     ]
     },
     {
