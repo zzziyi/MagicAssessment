@@ -41,16 +41,16 @@ function renderResult() {
 
      const levels = getFactorLevels(scores);
      const letters = getFactorLetters(levels);
-     const typeCode = buildTypeCode(letters);
-     const result = buildResult(typeCode);
-    
-     const alignment = getAlignmentText(letters.L);
-     const energy = getEnergyText(letters.E);
-
-    //  const typeCode = "XXXXX";
+    //  const typeCode = buildTypeCode(letters);
     //  const result = buildResult(typeCode);
-    //  const alignment = '黑暗';
-    //  const energy = '内倾';
+    
+    //  const alignment = getAlignmentText(letters.L);
+    //  const energy = getEnergyText(letters.E);
+
+     const typeCode = "INTJD"; // TODO: remove hardcoding
+     const result = buildResult(typeCode);
+     const alignment = '黑暗';
+     const energy = '内倾';
     
 
     const baseType = typeCode.slice(1, 4);
