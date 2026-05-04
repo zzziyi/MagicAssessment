@@ -58,11 +58,11 @@ const questions = [
     ]
     },
     {
-    question: "你学习一个你感兴趣的东西时更倾向",
+    question: "你开始学习一个你感兴趣的东西时更倾向",
     options: [
-      { text: "先研究具体案例", scores: { Sensing: 3 } },
-      { text: "先理解整体逻辑", scores: { Sensing: 1 } },
-      { text: "两者都有，看情况", scores: { Sensing: 2 } },
+      { text: "先研究具体案例，按照步骤来，确保每一步都理解清楚，然后再更好地理解整体原理", scores: { Sensing: 3 } },
+      { text: "先理解整体逻辑，然后通过具体案例练习和验证，且每一步不一定会按照既定流程", scores: { Sensing: 1 } },
+      { text: "在整体逻辑和具体案例之间反复切换，可能看案例看到一半就去看逻辑了，也可能看逻辑看到一半就去案例了", scores: { Sensing: 2 } },
     ]
     },
     //----------------T/F------------------
@@ -70,8 +70,8 @@ const questions = [
     question: "如果你和对方意见不同，你更难接受",
     options: [
       { text: "对方坚持错误的逻辑", scores: { Thinking: 3 } },
-      { text: "伤害对方让对方难堪", scores: { Thinking: 1 } },
-      { text: "两者都有，看情况", scores: { Thinking: 2 } }
+      { text: "对方伤害了我的感情让我难堪", scores: { Thinking: 1 } },
+      { text: "两者都不太舒服，但是程度都不深，勉强都可以忍受", scores: { Thinking: 2 } }
     ]
     },
     {
@@ -85,7 +85,7 @@ const questions = [
     {
     question: "如果规则是合理的，但是会让个别人难受，你更倾向",
     options: [
-      { text: "会有点犹豫，先延迟规则发布吧", scores: { Thinking: 2 } },
+      { text: "觉得规则是合理的，但心里还是会替那些人不舒服", scores: { Thinking: 2 } },
       { text: "既然规则是合理的，就应当遵守", scores: { Thinking: 3 } },
       { text: "先看能不能照顾个体，不然不公平", scores: { Thinking: 1 } }
     ]
@@ -111,8 +111,8 @@ const questions = [
     question: "你更讨厌",
     options: [
       { text: "混乱无序", scores: { Judging: 3 } },
-      { text: "看具体情况", scores: { Judging: 2 } },
       { text: "被安排死", scores: { Judging: 1 } },
+      { text: "两者都勉强可以接受", scores: { Judging: 2 } },
     ]
     },
     {
@@ -123,12 +123,20 @@ const questions = [
       { text: "正常，意外经常发生，以后把时间提前一些告诉他就行", scores: { Judging: 1 } },
     ]
     },
+    // {
+    // question: "面对一个长期任务，你更可能",
+    // options: [
+    //   { text: "分阶段规划完成", scores: { Judging: 3 } },
+    //   { text: "随进展灵活推进", scores: { Judging: 1 } },
+    //   { text: "两者都有，看情况", scores: { Judging: 2 } },
+    // ]
+    // },
     {
-    question: "面对一个长期任务，你更可能",
-    options: [
-      { text: "分阶段规划完成", scores: { Judging: 3 } },
-      { text: "随进展灵活推进", scores: { Judging: 1 } },
-      { text: "两者都有，看情况", scores: { Judging: 2 } },
+       question: "面对多个还不错的选择时，你更接近：",
+       options: [
+         { text: "收集尽可能全面的信息，对比以后再选出自己认为的最优解，结果的质量比较重要", scores: { Judging: 3 } },
+         { text: "尽快收集信息进行对比，并可以快速做出决定，时间就是金钱，决策的速度比较重要", scores: { Judging: 2 } },
+         { text: "在截止日期前会先保留选择，因为未来可能有更多的选择,保留灵活性比较重要", scores: { Judging: 1 } }
     ]
     },
     //----------------L/D------------------
