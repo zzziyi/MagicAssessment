@@ -17,7 +17,7 @@ const questions = [
     ]
     },
     {
-    question: "在游戏中你？",
+    question: "在游戏或旅游中你？",
     options: [
       { text: "不抗拒甚至喜欢和路人组队聊天", scores: { Extraversion: 3 } },
       { text: "比起和陌生人玩或者自已一个人，更愿意和熟悉的组队聊天", scores: { Extraversion: 2 } },
@@ -45,7 +45,7 @@ const questions = [
     question: "朋友告诉你一件事情，你会优先思考",
     options: [
       { text: "细节是否准确，比如时间和地点的准确性，有时候蛛丝马迹也能推断事情真相", scores: { Sensing: 3 } },
-      { text: "细节和整体对你来说同等重要，没有特别的偏好", scores: { Sensing: 2 } },
+      { text: "能接受只有细节，也能接受只说整体框架，没有特别的偏好", scores: { Sensing: 2 } },
       { text: "事情的整体框架和逻辑，只需要最重要的几个细节即可", scores: { Sensing: 1 } },
     ]
     },
@@ -61,8 +61,8 @@ const questions = [
     question: "你开始学习一个你感兴趣的东西时更倾向",
     options: [
       { text: "先研究具体案例，按照步骤来，确保每一步都理解清楚，然后再更好地理解整体原理", scores: { Sensing: 3 } },
-      { text: "先理解整体逻辑，然后通过具体案例练习和验证，且每一步不一定会按照既定流程", scores: { Sensing: 1 } },
-      { text: "在整体逻辑和具体案例之间反复切换，可能看案例看到一半就去看逻辑了，也可能看逻辑看到一半就去案例了", scores: { Sensing: 2 } },
+      { text: "先理解整体逻辑和原理，然后通过具体案例练习和验证，且每一步不一定会按照既定流程", scores: { Sensing: 1 } },
+      { text: "在整体逻辑和具体案例之间反复切换，会看案例看到一半就去看逻辑了，也会看逻辑看到一半就去案例了", scores: { Sensing: 2 } },
     ]
     },
     //----------------T/F------------------
@@ -74,12 +74,20 @@ const questions = [
       { text: "两者都不太舒服，但是程度都不深，勉强都可以忍受", scores: { Thinking: 2 } }
     ]
     },
+    // {
+    // question: "处理纠纷时你更接近",
+    // options: [
+    //   { text: "先将事情逻辑理清楚", scores: { Thinking: 3 } },
+    //   { text: "先帮亲近的人平缓心情", scores: { Thinking: 1 } },
+    //   { text: "两者都有，看情况", scores: { Thinking: 2 } }
+    // ]
+    // },
     {
-    question: "处理纠纷时你更接近",
+    question: "当你的朋友/弟弟妹妹很沮丧地和你说：“唉，我科目三考砸了，要被爸妈说了。”，你的第一反应是",
     options: [
-      { text: "先将事情逻辑理清楚", scores: { Thinking: 3 } },
-      { text: "先帮亲近的人平缓心情", scores: { Thinking: 1 } },
-      { text: "两者都有，看情况", scores: { Thinking: 2 } }
+      { text: "他现在心情一定很沮丧，我得好好安慰他，我觉得他已经做得很棒了", scores: { Thinking: 1 } },
+      { text: "我看看能不能分析一下原因，看看要怎么提升，帮助他下次考过", scores: { Thinking: 3 } },
+      { text: "转移一下他的注意力，现在说什么都没有用了", scores: { Thinking: 2 } }
     ]
     },
     {
@@ -93,9 +101,9 @@ const questions = [
     {
     question: "一个要好的朋友经常向你抱怨感情问题，你内心知道双方都有大问题，但当下你还是顺着他的话安抚。在这样做时，你内心的想法更接近",
     options: [
-      { text: "更关注问题本身应该怎么解决，他哪里做得不对我很清楚，只是暂时不说出来", scores: { Thinking: 3 } },
+      { text: "更关注问题本身应该怎么解决，他哪里做得不对我很清楚，且不会因为他是我朋友而改变想法", scores: { Thinking: 3 } },
       { text: "发自内心地在体谅和分担他的痛苦，甚至不自觉放下了客观的对错，只希望他情绪可以好一点", scores: { Thinking: 1 } },
-      { text: "感性和理性的拉扯让我倾向保持中立，知道他做的不太好，但又因为我们的关系而选择宽容一些", scores: { Thinking: 2 } },
+      { text: "感性和理性的拉扯让我倾向保持中立，知道他做的不太好，但又因为我们的关系而选择宽容一些，觉得他的做法也情有可原", scores: { Thinking: 2 } },
     ]
     },
     //----------------J/P------------------
@@ -104,23 +112,31 @@ const questions = [
     options: [
       { text: "提前看攻略，至少对要去的地方心中有数，如果做了计划就尽可能按照计划来", scores: { Judging: 3 } },
       { text: "稍微做点攻略和计划，也可能会很精细，不过大概只有一半按照计划来", scores: { Judging: 2 } },
-      { text: "计划赶不上变化，到了目的地再查旅游攻略，也可以随便走走看看", scores: { Judging: 1 } },
+      { text: "计划赶不上变化，到了目的地再查旅游攻略，也可以随便走走看看，说不定有惊喜", scores: { Judging: 1 } },
     ]
     },
     {
-    question: "你更讨厌",
+    question: "大部分时间，你的衣柜更接近？",
     options: [
-      { text: "混乱无序", scores: { Judging: 3 } },
-      { text: "被安排死", scores: { Judging: 1 } },
-      { text: "两者都勉强可以接受", scores: { Judging: 2 } },
+      { text: "规整叠放，会按照某种规律（功能/颜色/季节）按顺序摆放，所有东西一目了然，整整齐齐", scores: { Judging: 3 } },
+      { text: "挺整齐的，有粗略按照特定顺序摆放，大部分衣服都会稍微叠一下", scores: { Judging: 2 } },
+      { text: "除了挂起来的衣物，其他的衣服摆放比较随性，放置在一起，偶尔需要花一些时间翻找", scores: { Judging: 1 } },
     ]
     },
+    // {
+    // question: "你更讨厌",
+    // options: [
+    //   { text: "混乱无序", scores: { Judging: 3 } },
+    //   { text: "被安排死", scores: { Judging: 1 } },
+    //   { text: "两者都勉强可以接受", scores: { Judging: 2 } },
+    // ]
+    // },
     {
-    question: "如果你的伴侣或者朋友经常迟到，你内心真实的态度是",
+    question: "如果你的伴侣或者朋友经常迟到，有时候迟到二十分钟，偶尔两三个小时，但他不是故意的，在没有损失金钱的情况下，你内心真实的态度是",
     options: [
-      { text: "不喜欢，守时很重要，经常迟到会影响其他人的安排", scores: { Judging: 3 } },
-      { text: "看情况，只要不是特别重要的事情都可以接受", scores: { Judging: 2 } },
-      { text: "正常，意外经常发生，以后把时间提前一些告诉他就行", scores: { Judging: 1 } },
+      { text: "不喜欢，守时很重要，经常迟到会影响我后续的安排", scores: { Judging: 3 } },
+      { text: "看情况，迟到半个小时以内都勉强可以接受", scores: { Judging: 2 } },
+      { text: "无所谓，因为意外经常发生，只要不是很重要的事情迟到几个小时就行", scores: { Judging: 1 } },
     ]
     },
     // {
@@ -132,11 +148,11 @@ const questions = [
     // ]
     // },
     {
-       question: "面对多个还不错的选择时，你更接近：",
+       question: "面对一个比较重要的决定，有多个还不错的选择，你有十天的决定时间，你会：",
        options: [
-         { text: "收集尽可能全面的信息，对比以后再选出自己认为的最优解，结果的质量比较重要", scores: { Judging: 3 } },
-         { text: "尽快收集信息进行对比，并可以快速做出决定，时间就是金钱，决策的速度比较重要", scores: { Judging: 2 } },
-         { text: "在截止日期前会先保留选择，因为未来可能有更多的选择,保留灵活性比较重要", scores: { Judging: 1 } }
+         { text: "收集尽可能全面的信息，对比以后在第4-7天选出自己认为的最优解，结果的质量比较重要", scores: { Judging: 3 } },
+         { text: "尽快收集信息进行对比，并可以快速在第1-3天做出决定，时间就是金钱，决策的速度比较重要", scores: { Judging: 2 } },
+         { text: "在截止日期前都会收集信息和观望，在第8-10天再做决定,保留可修正性和灵活性比较重要", scores: { Judging: 1 } }
     ]
     },
     //----------------L/D------------------
